@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="AntiGravity — A premium 3D animated HTML5 landing page template. Built with pure CSS & Vanilla JS. Futuristic deep-space aesthetic. Perfect for portfolios, SaaS, and agencies." />
+  <meta name="keywords" content="html template, 3d, animated, landing page, futuristic, space, dark theme" />
+  <meta name="author" content="AntiGravity Template" />
+  <title>AntiGravity — 3D Animated HTML5 Landing Page Template</title>
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AntiGravity — 3D Animated HTML5 Landing Page Template" />
+  <meta property="og:description"
+    content="A premium 3D animated HTML5 template built for the future. Pure CSS + Vanilla JS. Deep space aesthetic." />
+  <meta property="og:image" content="assets/images/og-preview-banner.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/images/og-preview-banner.svg" />
+
+  <!-- ✏️ CUSTOMIZE: Google Fonts — change font families here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!-- Cursor glow effect -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ██████████████████████████████████████████████
+       SECTION 1: NAVIGATION BAR
+  ███████████████████████████████████████████████ -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+
+        <!-- ✏️ CUSTOMIZE: Change logo text below -->
+        <a href="#hero" class="nav-logo" aria-label="AntiGravity Home">
+          ANTI<span>GRAVITY</span>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#cta">Pricing</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+
+        <!-- ✏️ CUSTOMIZE: Replace with your Codester purchase link -->
+        <a href="#cta" class="nav-cta">Get Template</a>
+
+        <!-- Hamburger (mobile) -->
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile fullscreen menu -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#cta">Pricing</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+    <!-- ✏️ CUSTOMIZE: Replace with your CTA link -->
+    <a href="#cta" class="mobile-menu-cta">Get Template</a>
+  </div>
+
+  <!-- ██████████████████████████████████████████████
+       SECTION 2: HERO
+  ███████████████████████████████████████████████ -->
+  <section id="hero" aria-label="Hero section">
+
+    <!-- Particle Background Canvas -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <!-- 3D Floating Geometric Shapes -->
+    <div class="hero-shapes" aria-hidden="true">
+      <!-- Wireframe cube -->
+      <div class="shape-cube">
+        <div class="cube-face front"></div>
+        <div class="cube-face back"></div>
+        <div class="cube-face left"></div>
+        <div class="cube-face right"></div>
+        <div class="cube-face top"></div>
+        <div class="cube-face bottom"></div>
+      </div>
+      <!-- Floating ring -->
+      <div class="shape-ring"></div>
+      <!-- Rotating diamond -->
+      <div class="shape-diamond"></div>
+      <!-- Floating dots -->
+      <div class="shape-dot"></div>
+      <div class="shape-dot"></div>
+      <div class="shape-dot"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <p class="hero-eyebrow">Premium HTML5 Template — Version 1.0</p>
+
+      <!-- ✏️ CUSTOMIZE: Change hero headline below -->
+      <h1 class="hero-headline">
+        <span class="line1">DEFY</span>
+        <span class="line2">GRAVITY</span>
+      </h1>
+
+      <!-- ✏️ CUSTOMIZE: Change hero subheading -->
+      <p class="hero-subheading">
+        A premium 3D animated HTML5 template built for the future
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-buttons">
+        <!-- ✏️ CUSTOMIZE: Replace with your live demo link -->
+        <a href="#features" class="btn-primary" id="hero-demo-btn">View Live Demo</a>
+        <!-- ✏️ CUSTOMIZE: Replace with your Codester download link -->
+        <a href="#cta" class="btn-ghost" id="hero-download-btn">
+          <span>Download Now</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+
+  </section>
+
+  <!-- ██████████████████████████████████████████████
+       STATS BAR
+  ███████████████████████████████████████████████ -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid stagger">
+        <div class="stat-item reveal">
+          <span class="stat-value counter" data-target="200" data-suffix="+">0+</span>
+          <span class="stat-label">Animations</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-value counter" data-target="60" data-suffix="fps">0fps</span>
+          <span class="stat-label">Smooth Performance</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-value counter" data-target="6" data-suffix=" Sections">0 Sections</span>
+          <span class="stat-label">Fully Designed</span>
+        </div>
+        <div class="stat-item reveal">
+          <span class="stat-value counter" data-prefix="$" data-target="19">$0</span>
+          <span class="stat-label">One-Time Price</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ██████████████████████████████████████████████
+       SECTION 3: FEATURES
+  ███████████████████████████████████████████████ -->
+  <section id="features" aria-label="Features section">
+    <div class="container">
+
+      <!-- ✏️ CUSTOMIZE: Change section title below -->
+      <div class="section-header reveal">
+        <span class="section-label">What's Inside</span>
+        <h2 class="section-title">Core Features</h2>
+      </div>
+
+      <!-- ✏️ CUSTOMIZE: Add/remove feature cards here -->
+      <div class="features-grid stagger">
+
+        <div class="feature-card reveal" tabindex="0">
+          <span class="feature-icon">⚡</span>
+          <h3 class="feature-title">Fully Animated</h3>
+          <p class="feature-desc">60fps buttery smooth animations powered by pure CSS keyframes and optimized Vanilla JS
+            — no heavy libraries required.</p>
+        </div>
+
+        <div class="feature-card reveal" tabindex="0">
+          <span class="feature-icon">🌐</span>
+          <h3 class="feature-title">3D Elements</h3>
+          <p class="feature-desc">Every component lives in true 3D space. CSS transforms, perspective layers, and depth
+            illusions create a cinematic experience.</p>
+        </div>
+
+        <div class="feature-card reveal" tabindex="0">
+          <span class="feature-icon">📱</span>
+          <h3 class="feature-title">Responsive</h3>
+          <p class="feature-desc">Flawless on mobile, tablet, and desktop. Fully fluid layouts with intelligent
+            breakpoints and mobile-first design principles.</p>
+        </div>
+
+        <div class="feature-card reveal" tabindex="0">
+          <span class="feature-icon">🎨</span>
+          <h3 class="feature-title">Customizable</h3>
+          <p class="feature-desc">Easy color and font swap via CSS custom properties in :root. Retheme the entire
+            template in under 60 seconds.</p>
+        </div>
+
+        <div class="feature-card reveal" tabindex="0">
+          <span class="feature-icon">🚀</span>
+          <h3 class="feature-title">Performance</h3>
+          <p class="feature-desc">Optimized code with minimal dependencies. GPU-accelerated transforms, efficient canvas
+            loops, and lazy scroll triggers.</p>
+        </div>
+
+        <div class="feature-card reveal" tabindex="0">
+          <span class="feature-icon">📄</span>
+          <h3 class="feature-title">Documented</h3>
+          <p class="feature-desc">Full documentation included — setup guide, customization walkthrough, browser support
+            table, and library references.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ██████████████████████████████████████████████
+       SECTION 4: ABOUT / PRODUCT
+  ███████████████████████████████████████████████ -->
+  <section id="about" aria-label="About section">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Left Column — Copy -->
+        <div class="about-text">
+          <!-- ✏️ CUSTOMIZE: Change about section label -->
+          <span class="about-label reveal">What is AntiGravity?</span>
+
+          <!-- ✏️ CUSTOMIZE: Change about heading -->
+          <h2 class="about-title reveal">Built For Those Who Push Boundaries</h2>
+
+          <p class="about-body reveal">
+            AntiGravity is a premium, production-ready HTML5 landing page template crafted for developers, designers,
+            startups, and digital agencies who refuse to settle for ordinary. Every pixel, animation, and interaction
+            has been carefully engineered to make an unforgettable first impression.
+          </p>
+          <p class="about-body reveal">
+            Whether you're launching a SaaS product, showcasing a creative portfolio, or building a brand identity for a
+            tech company — AntiGravity gives you the visual firepower to stand out in a saturated market. Drop in your
+            content and ship something extraordinary.
+          </p>
+
+          <!-- ✏️ CUSTOMIZE: Edit checklist items -->
+          <ul class="about-checklist reveal">
+            <li>
+              <svg class="check-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <circle class="check-circle" cx="11" cy="11" r="10" />
+                <path class="check-mark" d="M6.5 11.5l3 3 6-6" />
+              </svg>
+              Pure CSS &amp; Vanilla JS — zero framework dependencies
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <circle class="check-circle" cx="11" cy="11" r="10" />
+                <path class="check-mark" d="M6.5 11.5l3 3 6-6" />
+              </svg>
+              CSS custom properties for instant theming
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <circle class="check-circle" cx="11" cy="11" r="10" />
+                <path class="check-mark" d="M6.5 11.5l3 3 6-6" />
+              </svg>
+              Full documentation + setup guide included
+            </li>
+            <li>
+              <svg class="check-icon" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <circle class="check-circle" cx="11" cy="11" r="10" />
+                <path class="check-mark" d="M6.5 11.5l3 3 6-6" />
+              </svg>
+              Compatible with all modern browsers
+            </li>
+          </ul>
+
+          <!-- ✏️ CUSTOMIZE: Change link target -->
+          <a href="#features" class="about-link reveal">
+            Explore Features <span class="arrow">→</span>
+          </a>
+        </div>
+
+        <!-- Right Column — Browser Mockup Visual -->
+        <div class="about-visual reveal-right">
+
+          <!-- Background glow orb -->
+          <div class="glow-orb" aria-hidden="true"></div>
+
+          <!-- Decorative orbiting rings -->
+          <div class="orbit-shape" aria-hidden="true">
+            <div class="orbit-dot"></div>
+          </div>
+          <div class="orbit-shape" aria-hidden="true">
+            <div class="orbit-dot"></div>
+          </div>
+
+          <!-- Floating browser mockup -->
+          <div class="browser-mockup" aria-label="Template preview mockup">
+            <div class="browser-topbar">
+              <div class="browser-dot red"></div>
+              <div class="browser-dot yellow"></div>
+              <div class="browser-dot green"></div>
+              <div class="browser-address">antigravity-template.com</div>
+            </div>
+            <div class="browser-body">
+              <div class="browser-preview">
+                <div class="preview-hero">
+                  <!-- Floating mini particles inside mockup -->
+                  <div class="preview-particles" aria-hidden="true">
+                    <div class="preview-particle"></div>
+                    <div class="preview-particle"></div>
+                    <div class="preview-particle"></div>
+                    <div class="preview-particle"></div>
+                    <div class="preview-particle"></div>
+                  </div>
+                  <div class="preview-title">ANTIGRAVITY</div>
+                  <div class="preview-sub">3D ANIMATED HTML5 TEMPLATE</div>
+                  <div class="preview-btns">
+                    <div class="preview-btn solid">View Demo</div>
+                    <div class="preview-btn outline">Download</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ██████████████████████████████████████████████
+       SECTION 5: CALL TO ACTION
+  ███████████████████████████████████████████████ -->
+  <section id="cta" aria-label="Call to action section">
+
+    <!-- Animated particle background (simplified) -->
+    <canvas id="cta-canvas" aria-hidden="true"></canvas>
+
+    <div class="container">
+      <div class="cta-content">
+
+        <!-- ✏️ CUSTOMIZE: Change CTA headline -->
+        <h2 class="cta-headline reveal">Ready To Launch?</h2>
+
+        <p class="cta-sub reveal">
+          Get the AntiGravity template today and ship something extraordinary. One-time purchase, lifetime updates, full
+          source code.
+        </p>
+
+        <!-- Animated price badge -->
+        <div class="price-badge reveal" aria-label="Price: $19 one-time">
+          <span class="price-amount">$19</span> One-Time
+        </div>
+
+        <!-- ✏️ CUSTOMIZE: Replace with your Codester buy link -->
+        <div class="cta-buttons">
+          <a href="https://codester.com" class="btn-primary" id="cta-buy-btn" target="_blank" rel="noopener noreferrer">
+            Buy on Codester
+          </a>
+          <a href="#features" class="btn-ghost" id="cta-preview-btn">
+            <span>Preview Demo</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ██████████████████████████████████████████████
+       SECTION 6: FOOTER
+  ███████████████████████████████████████████████ -->
+  <footer id="footer" aria-label="Footer">
+    <div class="container">
+
+      <!-- Logo + tagline -->
+      <div class="footer-top">
+        <span class="footer-logo">ANTI<span>GRAVITY</span></span>
+        <p class="footer-tagline">Built for the future. Designed to defy.</p>
+      </div>
+
+      <!-- ✏️ CUSTOMIZE: Edit footer columns -->
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#cta">Pricing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="documentation/index.html">Documentation</a></li>
+            <li><a href="documentation/index.html#installation">Installation Guide</a></li>
+            <li><a href="documentation/index.html#customization">Customization</a></li>
+            <li><a href="README.txt">README</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <!-- ✏️ CUSTOMIZE: Replace href with your actual social links -->
+            <a href="https://github.com" class="social-icon" aria-label="GitHub" target="_blank"
+              rel="noopener noreferrer" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </a>
+            <a href="https://twitter.com" class="social-icon" aria-label="Twitter / X" target="_blank"
+              rel="noopener noreferrer" title="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+            <a href="https://codester.com" class="social-icon" aria-label="Codester" target="_blank"
+              rel="noopener noreferrer" title="Codester">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 <a href="#hero">AntiGravity Template</a>. Crafted for
+          <a href="https://codester.com" target="_blank" rel="noopener noreferrer">Codester</a>.
+          All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
